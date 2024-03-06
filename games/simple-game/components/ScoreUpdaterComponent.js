@@ -3,7 +3,7 @@ class ScoreUpdaterComponent extends Component {
     Globals.score = 0;
   }
   update() {
-      Globals.score++
+      // Globals.score++
       this.parent.components[1].text = "" + Globals.score;
   }
 }

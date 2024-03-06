@@ -34,6 +34,7 @@ class Engine {
     Engine.currentScene.update(ctx)
 
     //Remove anything marked for destroy
+    Engine.currentScene.gameObjects = Engine.currentScene.gameObjects.filter(go=>go.markForDestroy == false);
 
     //Draw in world space
     Engine.currentScene.draw(ctx)

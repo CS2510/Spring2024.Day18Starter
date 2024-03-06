@@ -24,7 +24,7 @@ class MainScene extends Scene {
       deathGameObject.transform.scaleX = 50
       this.gameObjects.push(deathGameObject)
 
-      let deathGameObject2 = new GameObject("DeathGameObject2")
+      let deathGameObject2 = new GameObject("DeathGameObject")
       deathGameObject2.addComponent(new DeathComponent())
       deathGameObject2.addComponent(new Circle("red", "black"))
       deathGameObject2.transform.x = 300
