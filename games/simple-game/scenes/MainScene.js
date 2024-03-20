@@ -3,43 +3,39 @@ import "../components/KeyboardComponent.js"
 import "../components/FireComponent.js"
 import "../components/LaserComponent.js"
 import "../components/ScoreUpdaterComponent.js"
+import "../components/ModelUpdaterComponent.js"
+
+import "../prefabs/DeathGameObject.js"
+import "../prefabs/FlodnagGameObjects.js"
+
+import "../ShooterModel.js"
+import ModelUpdaterComponent from "../components/ModelUpdaterComponent.js"
 
 /** The main scene in our game */
 class MainScene extends Scene {
   constructor() {
       super("lightgray")
+      this.model = new ShooterModel()
+  }
+  start(ctx){
 
       let circleGameObject = new GameObject("CircleGameObject")
       circleGameObject.addComponent(new Circle())
       circleGameObject.addComponent(new KeyboardComponent())
       circleGameObject.addComponent(new FireComponent())
-      circleGameObject.transform.scaleX = 50
-      this.gameObjects.push(circleGameObject)
+      circleGameObject.addComponent(new ModelUpdaterComponent(this.model))
+      GameObject.instantiate(circleGameObject, 200, 400, 50)
       
-      let deathGameObject = new GameObject("DeathGameObject")
-      deathGameObject.addComponent(new DeathComponent())
-      deathGameObject.addComponent(new Circle("red", "black"))
-      deathGameObject.transform.x = 200;
-      deathGameObject.transform.y = 0;
-      deathGameObject.transform.scaleX = 50
-      this.gameObjects.push(deathGameObject)
+      // GameObject.instantiate(new DeathGameObject(), 200, 0, 50)
 
-      let deathGameObject2 = new GameObject("DeathGameObject")
-      deathGameObject2.addComponent(new DeathComponent())
-      deathGameObject2.addComponent(new Circle("red", "black"))
-      deathGameObject2.transform.x = 300
-      deathGameObject2.transform.y = 200
-      deathGameObject2.transform.scaleX = 50
-      this.gameObjects.push(deathGameObject2)
+      // GameObject.instantiate(new FlodnagGameObject(), 300, 200, 50)
       
 
       
       let scoreGameObject = new GameObject()
-      scoreGameObject.transform.x = 30;
-      scoreGameObject.transform.y = 30;
       scoreGameObject.addComponent(new Text("Score: ", "30px sans", "white"))
       scoreGameObject.addComponent(new ScoreUpdaterComponent())
-      this.gameObjects.push(scoreGameObject)
+      GameObject.instantiate(scoreGameObject, 30, 30)
   }
 }
 

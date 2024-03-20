@@ -25,6 +25,7 @@ class LaserComponent extends Component{
                         name: "laserCollision",
                     }
                     EventSystem.fireEvent(event)
+                    GameObject.destroy(this.parent);
 
             }
         }

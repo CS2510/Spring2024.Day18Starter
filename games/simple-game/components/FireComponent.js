@@ -12,9 +12,7 @@ class FireComponent extends Component {
             let laserGameObject = new GameObject("LaserGameObject")
             laserGameObject.addComponent(new Circle())
             laserGameObject.addComponent(new LaserComponent())
-            laserGameObject.transform.x = this.transform.x
-            laserGameObject.transform.y = this.transform.y
-            GameObject.instantiate(laserGameObject);
+            GameObject.instantiate(laserGameObject, this.transform.x, this.transform.y);
 
             this.secondsToFire = this.secondsBetweenLasers;
         }

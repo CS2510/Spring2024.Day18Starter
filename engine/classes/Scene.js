@@ -35,9 +35,10 @@ class Scene {
      * 
      * @param {CanvasRenderingContext2D} ctx The current rendering context
      */
-    start(ctx){
+    _start(ctx){
         if(!this.hasStarted){
             this.hasStarted = true;
+            this.start(ctx);
             for(const gameObject of this.gameObjects){
                 if(gameObject.start){
                     gameObject.start(ctx);

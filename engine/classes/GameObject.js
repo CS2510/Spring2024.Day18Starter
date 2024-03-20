@@ -119,8 +119,12 @@ class GameObject {
      * initialize this game object.
      * @param {GameObject} gameObject The game object to add to the scene
      */
-    static instantiate(gameObject) {
+    static instantiate(gameObject, x = 0, y = 0, scaleX = 1, scaleY = 1) {
         Engine.currentScene.gameObjects.push(gameObject)
+        gameObject.transform.x = x;
+        gameObject.transform.y = y;
+        gameObject.transform.scaleX = scaleX;
+        gameObject.transform.scaleY = scaleY;
     }
 
     /**

@@ -5,6 +5,8 @@ import "../components/EndSceneCounterComponent.js"
 class DeathScene extends Scene {
   constructor() {
       super("black")
+  }
+  start(ctx){
       
       let scoreGameObject = new GameObject()
       scoreGameObject.addComponent(new Text("Score: ", "30px sans", "white"))

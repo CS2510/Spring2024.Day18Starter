@@ -1,16 +1,25 @@
 class DeathComponent extends Component {
-    constructor(){
+    constructor() {
         super()
-    }
-    start(){
         EventSystem.registerListener(this);
     }
+    start() {
+    }
 
-    handleEvent(event){
+    handleEvent(event) {
         console.log(event);
-        if(event.dest == this){
-            if(event.name == "laserCollision"){
-                GameObject.destroy(this.parent);
+        if (event.dest == this.parent) {
+            if (event.name == "laserCollision") {
+                this.parent.health--;
+
+                if (this.parent.health <= 0) {
+                    EventSystem.fireEvent({
+                        origin:this.parent,
+                        dest: null,
+                        name: "scoreUpdate"
+                    })
+                    GameObject.destroy(this.parent);
+                }
             }
         }
     }
@@ -24,7 +33,7 @@ class DeathComponent extends Component {
             }
         }
 
-        if(!circleGameObject) return;
+        if (!circleGameObject) return;
 
         let collision = Collisions.isCircleCircleCollision(
             { x: this.transform.x, y: this.transform.y },
