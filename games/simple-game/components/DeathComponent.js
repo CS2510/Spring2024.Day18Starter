@@ -3,6 +3,16 @@ class DeathComponent extends Component {
         super()
     }
     start(){
+        EventSystem.registerListener(this);
+    }
+
+    handleEvent(event){
+        console.log(event);
+        if(event.dest == this){
+            if(event.name == "laserCollision"){
+                GameObject.destroy(this.parent);
+            }
+        }
     }
 
     update() {

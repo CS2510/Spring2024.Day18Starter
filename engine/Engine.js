@@ -12,6 +12,7 @@ import "/engine/static/Collisions.js"
 import "/engine/static/Input.js"
 import "/engine/static/Globals.js"
 import "/engine/static/Time.js"
+import "/engine/static/EventSystem.js"
 
 
 class Engine {

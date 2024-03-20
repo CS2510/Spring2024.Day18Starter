@@ -17,8 +17,14 @@ class LaserComponent extends Component{
                 invader.transform.scaleX,
                 this.transform.scaleX
                 )){
-                    GameObject.destroy(invader);
-                    Globals.score++;
+                    // GameObject.destroy(invader);
+                    // Globals.score++;
+                    let event = {
+                        origin: this,
+                        dest: invader,
+                        name: "laserCollision",
+                    }
+                    EventSystem.fireEvent(event)
 
             }
         }
