@@ -15,7 +15,7 @@ import ModelUpdaterComponent from "../components/ModelUpdaterComponent.js"
 class MainScene extends Scene {
   constructor() {
       super("lightgray")
-      this.model = new ShooterModel()
+      this.model = new ShooterModelEvents()
   }
   start(ctx){
 
