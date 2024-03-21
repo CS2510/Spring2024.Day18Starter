@@ -7,7 +7,7 @@ class DeathComponent extends Component {
     }
 
     handleEvent(event) {
-        console.log(event);
+        // console.log(event);
         if (event.dest == this.parent) {
             if (event.name == "laserCollision") {
                 this.parent.health--;
