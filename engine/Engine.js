@@ -31,8 +31,14 @@ class Engine {
 
     Engine.currentScene._start(ctx);
 
+
+    
+
     // Update the current scene
     Engine.currentScene.update(ctx)
+    
+    //Update the input
+    Input.update();
 
     //Remove anything marked for destroy
     Engine.currentScene.gameObjects = Engine.currentScene.gameObjects.filter(go=>go.markForDestroy == false);
@@ -50,6 +56,7 @@ class Engine {
     document.addEventListener("keyup", Input.keyup)
 
     document.addEventListener("mousemove", Input.mousemove)
+    document.addEventListener("mouseup", Input.mouseup);
 
 
     //In the background, create a thread and call
