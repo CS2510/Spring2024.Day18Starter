@@ -1,5 +1,5 @@
 class XPrefab extends GameObject{
-  constructor(name="XPrefab"){
+  constructor(x,y,name="XPrefab"){
     super(x,y,name);
     this.x = x;
     this.y = y;

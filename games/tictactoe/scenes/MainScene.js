@@ -7,9 +7,10 @@ import "../components/BlankComponent.js"
 
 /** The main scene in our game */
 class MainScene extends Scene {
+  static model;
   constructor() {
     super("lightgray")
-    this.model = new TicTacToeModelEvents()
+    MainScene.model = new TicTacToeModelEvents()
   }
   start(ctx) {
     //Draw the board

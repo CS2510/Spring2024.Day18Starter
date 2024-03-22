@@ -1,3 +1,4 @@
+
 class BlankComponent extends Component{
   constructor(x,y,name="BlackPrefabComponent"){
     super(name);
@@ -11,6 +12,16 @@ class BlankComponent extends Component{
       if(this.x == event.args[0] && this.y == event.args[1]){
         console.log("destroy")
         GameObject.destroy(this.parent);
+
+        let toAdd;
+        if(MainScene.model.getNextTurn() == TicTacToeModel.O)
+          toAdd = new XPrefab(this.x, this.y);
+        else
+          toAdd = new OPrefab(this.x, this.y);
+        GameObject.instantiate(
+          toAdd, 
+          this.transform.x, this.transform.y, 
+          this.transform.scaleX, this.transform.scaleY)
       }
     }
 
