@@ -1,11 +1,12 @@
 import "./FollowMouseComponent.js"
 import "./CheckCollisionsComponentCircle_Rectangle.js"
 import "./CheckCollisionsComponentRectangle_Rectangle.js"
-import CheckCollisionsComponentRectangle_Rectangle from "./CheckCollisionsComponentRectangle_Rectangle.js"
 
 class RectangleScene extends Scene {
   constructor() {
     super("purple")
+  }
+  start(){
 
     //A circle against which we will do collision detection.
     let collisionCircleGameObject = new GameObject("CollisionCircleGameObject")
