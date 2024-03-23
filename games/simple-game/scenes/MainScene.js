@@ -3,19 +3,15 @@ import "../components/KeyboardComponent.js"
 import "../components/FireComponent.js"
 import "../components/LaserComponent.js"
 import "../components/ScoreUpdaterComponent.js"
-import "../components/ModelUpdaterComponent.js"
 
 import "../prefabs/DeathGameObject.js"
 import "../prefabs/FlodnagGameObjects.js"
 
-import "../ShooterModel.js"
-import ModelUpdaterComponent from "../components/ModelUpdaterComponent.js"
 
 /** The main scene in our game */
 class MainScene extends Scene {
   constructor() {
       super("lightgray")
-      this.model = new ShooterModelEvents()
   }
   start(ctx){
 
@@ -23,12 +19,11 @@ class MainScene extends Scene {
       circleGameObject.addComponent(new Circle())
       circleGameObject.addComponent(new KeyboardComponent())
       circleGameObject.addComponent(new FireComponent())
-      circleGameObject.addComponent(new ModelUpdaterComponent(this.model))
       GameObject.instantiate(circleGameObject, 200, 400, 50)
       
-      // GameObject.instantiate(new DeathGameObject(), 200, 0, 50)
+      GameObject.instantiate(new DeathGameObject(), 200, 0, 50)
 
-      // GameObject.instantiate(new FlodnagGameObject(), 300, 200, 50)
+      GameObject.instantiate(new FlodnagGameObject(), 300, 200, 50)
       
 
       
