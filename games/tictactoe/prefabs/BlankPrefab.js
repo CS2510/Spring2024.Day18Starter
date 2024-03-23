@@ -7,4 +7,3 @@ class BlankPrefab extends GameObject {
 }
 
 window.BlankPrefab = BlankPrefab
-export default BlankPrefab;

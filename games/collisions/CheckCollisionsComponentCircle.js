@@ -31,4 +31,3 @@ class CheckCollisionsComponentCircle extends Component{
 }
 
 window.CheckCollisionsComponentCircle = CheckCollisionsComponentCircle
-export default CheckCollisionsComponentCircle

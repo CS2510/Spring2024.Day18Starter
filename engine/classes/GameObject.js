@@ -140,4 +140,3 @@ class GameObject {
 }
 
 window.GameObject = GameObject
-export default GameObject

@@ -8,4 +8,3 @@ class OPrefab extends GameObject{
 }
 
 window.OPrefab = OPrefab
-export default OPrefab;

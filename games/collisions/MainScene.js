@@ -37,4 +37,3 @@ class MainScene extends Scene {
 }
 
 window.MainScene = MainScene
-export default MainScene;

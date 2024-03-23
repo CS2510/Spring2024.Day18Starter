@@ -67,4 +67,3 @@ class Engine {
 }
 
 window.Engine = Engine
-export default Engine;

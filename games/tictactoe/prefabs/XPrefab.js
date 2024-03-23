@@ -8,4 +8,3 @@ class XPrefab extends GameObject{
 }
 
 window.XPrefab = XPrefab
-export default XPrefab;

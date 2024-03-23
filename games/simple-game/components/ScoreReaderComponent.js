@@ -5,4 +5,3 @@ class ScoreReaderComponent extends Component {
 }
 
 window.ScoreReaderComponent = ScoreReaderComponent;
-export default ScoreReaderComponent

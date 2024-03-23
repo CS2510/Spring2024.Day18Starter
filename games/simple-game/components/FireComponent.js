@@ -22,4 +22,3 @@ class FireComponent extends Component {
     }
 }
 window.FireComponent = FireComponent
-export default FireComponent

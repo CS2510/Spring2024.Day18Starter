@@ -33,4 +33,3 @@ class CheckCollisionsComponentRectangle_Rectangle extends Component{
   }
   
   window.CheckCollisionsComponentRectangle_Rectangle = CheckCollisionsComponentRectangle_Rectangle
-  export default CheckCollisionsComponentRectangle_Rectangle

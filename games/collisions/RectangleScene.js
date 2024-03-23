@@ -40,4 +40,3 @@ class RectangleScene extends Scene {
 }
 
 window.RectangleScene = RectangleScene
-export default RectangleScene;

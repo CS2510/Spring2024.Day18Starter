@@ -11,4 +11,3 @@ class FlodnagGameObject extends DeathGameObject{
 }
 
 window.FlodnagGameObject = FlodnagGameObject
-export default FlodnagGameObject;

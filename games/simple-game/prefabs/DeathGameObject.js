@@ -12,4 +12,3 @@ class DeathGameObject extends GameObject {
 }
 
 window.DeathGameObject = DeathGameObject
-export default DeathGameObject;

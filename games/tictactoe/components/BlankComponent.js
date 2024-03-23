@@ -47,4 +47,3 @@ class BlankComponent extends Component{
 }
 
 window.BlankComponent = BlankComponent
-export default BlankComponent;

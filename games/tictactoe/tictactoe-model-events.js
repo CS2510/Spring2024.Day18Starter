@@ -25,4 +25,3 @@ class TicTacToeModelEvents extends TicTacToeModel {
 }
 
 window.TicTacToeModelEvents = TicTacToeModelEvents;
-export default TicTacToeModelEvents;

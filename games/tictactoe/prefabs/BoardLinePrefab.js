@@ -6,4 +6,3 @@ class BoardLinePrefab extends GameObject{
 }
 
 window.BoardLinePrefab = BoardLinePrefab;
-export default BoardLinePrefab;

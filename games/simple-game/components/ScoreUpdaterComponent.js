@@ -16,4 +16,3 @@ class ScoreUpdaterComponent extends Component {
 }
 
 window.ScoreUpdaterComponent = ScoreUpdaterComponent
-export default ScoreUpdaterComponent;

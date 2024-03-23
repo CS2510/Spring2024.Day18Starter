@@ -49,4 +49,3 @@ class DeathComponent extends Component {
 }
 
 window.DeathComponent = DeathComponent;
-export default DeathComponent

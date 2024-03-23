@@ -28,4 +28,3 @@ class DeathScene extends Scene {
 }
 
 window.DeathScene = DeathScene
-export default DeathScene

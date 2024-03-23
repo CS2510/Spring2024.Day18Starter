@@ -34,4 +34,3 @@ class LaserComponent extends Component{
 }
 
 window.LaserComponent = LaserComponent;
-export default LaserComponent;

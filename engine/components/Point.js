@@ -12,4 +12,3 @@ class Point extends Component {
 }
 
 window.Point = Point
-export default Point;

@@ -10,4 +10,3 @@ class FollowMouseComponent extends Component{
 }
 
 window.FollowMouseComponent = FollowMouseComponent
-export default FollowMouseComponent;

@@ -19,4 +19,3 @@ class Rectangle extends Component {
 }
 
 window.Rectangle = Rectangle
-export default Rectangle

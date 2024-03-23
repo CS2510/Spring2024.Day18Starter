@@ -152,4 +152,3 @@ class TicTacToeModel{
 
 
 window.TicTacToeModel = TicTacToeModel;
-export default TicTacToeModel;

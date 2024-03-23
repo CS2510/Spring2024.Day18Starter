@@ -18,4 +18,3 @@ class KeyboardComponent extends Component{
 }
 
 window.KeyboardComponent = KeyboardComponent;
-export default KeyboardComponent

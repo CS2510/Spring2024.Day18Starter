@@ -6,4 +6,3 @@ class Transform extends Component{
 }
 
 window.Transform = Transform
-export default Transform

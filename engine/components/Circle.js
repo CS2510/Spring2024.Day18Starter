@@ -16,4 +16,3 @@ class Circle extends Component {
 }
 
 window.Circle = Circle
-export default Circle;
