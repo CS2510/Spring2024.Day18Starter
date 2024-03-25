@@ -8,6 +8,8 @@ import "/engine/components/Rectangle.js"
 import "/engine/components/Text.js"
 import "/engine/components/Transform.js"
 
+import "/engine/geometry/Vector2.js"
+
 import "/engine/static/Collisions.js"
 import "/engine/static/Input.js"
 import "/engine/static/Globals.js"
