@@ -1,6 +1,7 @@
 class Input {
     /** Store input states for our game */
     static keysDown = []
+    static keysUpThisFrame = []
     static mousePosition = { x: 0, y: 0 }
     static mouseUpThisFrame = false;
 
@@ -18,6 +19,7 @@ class Input {
     static keyup(e) {
         let index = Input.keysDown.indexOf(e.code)
         Input.keysDown.splice(index, 1)
+        Input.keysUpThisFrame.push(e.code);
     }
 
     /** Respond to key down events */
@@ -28,6 +30,7 @@ class Input {
 
     static update(){
         Input.mouseUpThisFrame = false
+        Input.keysUpThisFrame = []
     }
 }
 

@@ -1,4 +1,3 @@
-import "../tictactoe-model-events.js"
 import "../prefabs/BoardLinePrefab.js"
 import "../prefabs/XPrefab.js"
 import "../prefabs/OPrefab.js"

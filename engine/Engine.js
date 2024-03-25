@@ -16,10 +16,13 @@ import "/engine/static/EventSystem.js"
 
 
 class Engine {
+
+  isSystemPaused = false;
+
   /**
-         * The game loop.
-         * The game loop calls update and draw using a timer
-         */
+   * The game loop.
+   * The game loop calls update and draw using a timer
+   */
   static gameLoop() {
     let canvas = document.querySelector("#canv")
     let ctx = canvas.getContext("2d")
@@ -29,19 +32,33 @@ class Engine {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    Engine.currentScene._start(ctx);
+    //System-level pause
+    if (Input.keysUpThisFrame.includes("KeyP")) {
+      if (Engine.isSystemPaused) {
+        Engine.isSystemPaused = false;
+      }
+      else {
+        Engine.isSystemPaused = true;
+      }
+    }
+
+    if (!Engine.isSystemPaused) {
 
 
-    
 
-    // Update the current scene
-    Engine.currentScene.update(ctx)
-    
+      //Call start on game objects that haven't been started
+      Engine.currentScene._start(ctx);
+
+      // Update the current scene
+      Engine.currentScene.update(ctx)
+
+
+      //Remove anything marked for destroy
+      Engine.currentScene.gameObjects = Engine.currentScene.gameObjects.filter(go => go.markForDestroy == false);
+    }
+
     //Update the input
     Input.update();
-
-    //Remove anything marked for destroy
-    Engine.currentScene.gameObjects = Engine.currentScene.gameObjects.filter(go=>go.markForDestroy == false);
 
     //Draw in world space
     Engine.currentScene.draw(ctx)
