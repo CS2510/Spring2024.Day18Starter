@@ -35,12 +35,13 @@ class Scene {
      * 
      * @param {CanvasRenderingContext2D} ctx The current rendering context
      */
-    _start(ctx){
-        if(!this.hasStarted){
+    _start(ctx) {
+        if (!this.hasStarted) {
             this.hasStarted = true;
-            this.start(ctx);
-            for(const gameObject of this.gameObjects){
-                if(gameObject.start){
+            if (this.start)
+                this.start(ctx);
+            for (const gameObject of this.gameObjects) {
+                if (gameObject.start) {
                     gameObject.start(ctx);
                 }
             }
@@ -52,9 +53,9 @@ class Scene {
      * 
      * @param {CanvasRenderingContext2D} ctx The current rendering context
      */
-    update(ctx){
-        for(const gameObject of this.gameObjects){
-            if(gameObject.update){
+    update(ctx) {
+        for (const gameObject of this.gameObjects) {
+            if (gameObject.update) {
                 gameObject.update(ctx);
             }
         }
